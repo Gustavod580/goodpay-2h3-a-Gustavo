@@ -1,7 +1,8 @@
 body {
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: auto;
     font-family: 'Poppins', 'Verdana', 'Arial';
+    max-width: 1090px;
 }
 
 h2,
@@ -15,6 +16,7 @@ p {
     padding: 0;
     overflow: hidden;
     background-color: #444444;
+    max-width: 1090px;
 }
 
 .menu li {
@@ -22,6 +24,8 @@ p {
 }
 
 .menu li a {
+    margin-left: auto;
+    margin-right: auto;
     display: block;
     color: white;
     text-align: center;
@@ -39,4 +43,22 @@ p {
     background-color: #009929;
     padding: 5px;
     margin: 0;
+}
+
+.myslide {
+    display: none;
+}
+
+.w3-left,.w3-right,.w3-bage {
+    cursor: pointer;
+}
+
+.w3-bage {
+    width: 13px;
+    height: 13px;
+    padding: 0px;
+
+}
+.banner{
+    max-width: 1090px;
 }
