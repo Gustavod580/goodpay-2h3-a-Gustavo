@@ -59,7 +59,8 @@ async function loginGoodPay() {
         const userValided = users.find(u => u.email === email && u.password === password)
 
         if (userValided) {
-            window.location.href = './dashboard.html'
+            window.location.href = './dashBoard.html'
+            localStorage.setItem('email', email)
         } else {
             alert('Erro ao processar, Seu e-mail ou Senha estão incorretos')
         }
@@ -67,3 +68,10 @@ async function loginGoodPay() {
         console.log(error)
     }
 }
+async function loadUser() {
+            document.getElementById('nome-card').innerHTML = localStorage.email
+            document.getElementById('resumo').innerHTML =`<label>E-mail</label> ${localStorage.email}`
+}
+document.addEventListener('DOMContentLoaded', () => {
+    loadUser()
+})
