@@ -69,9 +69,19 @@ async function loginGoodPay() {
     }
 }
 async function loadUser() {
-            document.getElementById('nome-card').innerHTML = localStorage.email
-            document.getElementById('resumo').innerHTML =`<label>E-mail</label> ${localStorage.email}`
+    document.getElementById('nome-card').innerHTML = localStorage.email
+    document.getElementById('resumo').innerHTML = `<label>E-mail</label> ${localStorage.email}`
 }
 document.addEventListener('DOMContentLoaded', () => {
     loadUser()
 })
+
+async function logoutUser() {
+    if (localStorage.email != null) {
+        localStorage.removeItem('email')
+        console.info('Sessão Limpa.')
+        window.location.href = './index.html'
+    }else{
+        console.error('Sessão não Existe')
+    }
+}
